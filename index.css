@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Quicksand:wght@300..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: #F7FDFF;
+    overflow-x: hidden;
+    font-family: Quicksand, sans-serif;
+}
+
+::-webkit-scrollbar{
+    width: 0px;
+    height: 0px;
+}
+ 
+header{
+    background-image: url(image/Monpera/Monpera.jpeg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    box-sizing: border-box;
+}
+.navbar{
+    background-color: rgba(30, 30, 30, 0.6); 
+}
+.navbar.scrolled {
+    background-color: rgba(30, 30, 30, 0.9); 
+    transition: background-color 0.3s ease, color 0.3s ease; 
+}
+.navbar a{
+    color: #FFFFFF;
+}
+
+.navbar ul li a:hover{
+    transition: 0.2s ;
+    font-weight: bold;
+}
+
+.Home-container {
+    display: flex;
+    justify-content: space-evenly; 
+    position: relative;
+    top:30%;   
+}
+
+
+.Home-container h1{
+    width: 100%;
+    font-size:10rem;
+    font-weight: bolder;
+    color: #005b96;
+    text-shadow: #0e0e0e23 5px 4px ;
+    font-family: Quicksand, sans-serif;
+    z-index: 4;
+    position: relative;
+    color: #F7FDFF;
+    text-align: center;
+}
+
+/* Main */
+section h2{
+    text-decoration: underline;
+    font-size:2.5rem;
+    margin: 4rem 0 2rem 0rem;
+    color: #142b4f;
+    font-family: Quicksand, sans-serif;
+}
+
+
+#Sejarah p {
+    font-size: 20px;
+    font-family: Quicksand, sans-serif;
+}
+
+.extra-content {
+    max-height: 0; /* Start with a max-height of 0 */
+    overflow: hidden; /* Hide overflow */
+    opacity: 0; /* Start with invisible content */
+    transition: max-height 0.5s ease, opacity 0.5s ease; /* Add transition for max-height and opacity */
+}
+
+.extra-content.show {
+    max-height: 500px; /* Set a max-height that accommodates your content */
+    opacity: 1; /* Make it visible */
+}
+
+button#show-more-btn {
+    display: block;
+    padding: 0.5rem 1rem;
+    background-color: #232323;
+    color: #F7FDFF;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: Quicksand, sans-serif;
+}
+
+button#show-more-btn:hover {
+    background-color: #444;
+}
+
+
+/*Wisata Pilihan*/
+/* #Wisata-Pilihan{
+    background-image: url(image/Kujur/Tugu-kujur.jpeg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-attachment: fixed;
+    background-size: cover;
+} */
+
+#Wisata-Pilihan img{
+    height: 300px;
+    object-fit: cover;
+}
+
+.panduan-cards h3{
+    text-align: left;
+    font-size: 1.5rem;  
+    transform: translateY(-100px);
+    font-weight: bold;
+    height: 60px; 
+    width: 300px;
+    background-color: #f7fdff94;
+    color:#232323 ;
+}
+
+
+#Lainya a{
+    text-decoration: none;
+    color: #e9e3e3;
+}
+.panduan-cards{
+    overflow: hidden;
+    height: 350px;
+    width: 300px;
+    display: flex;
+    object-fit: cover;
+}
+.panduan-cards img{
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.3s ease;
+}
+
+.panduan-cards:hover img{
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.sosmed{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.bg-danger{
+    --bs-gradient: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4);
+}
+/*Footer*/
+
+footer {
+    margin-top: 30vh; /* Reduce the top margin to shrink the space above the footer */
+    width: 100%;
+    background-color: #232323;
+    color: #F7FDFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px; /* Reduced padding to make the footer more compact */
+    position: relative;
+    height: 10rem;
+}
+
+.left-section, .right-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 10px; /* Reduced horizontal padding */
+}
+
+.left-section ul, .right-section {
+    display: flex;
+    align-items: center;
+}
+
+.right-section img {
+    width: 10rem; /* Slightly reduce the logo size */
+    height: auto;
+    margin-left: auto;
+}
+
+.left-section ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.left-section ul li img {
+    width: 1.3rem; /* Reduce the icon size */
+    height: auto;
+}
+
+.bottom-section {
+    text-align: center;
+    margin-top: 0.5rem; /* Reduced top margin for the bottom section */
+}
+
+.bottom-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.bottom-section ul li {
+    display: inline;
+    margin: 0 8px; /* Reduced horizontal margin for links */
+}
+
+.bottom-section ul li a {
+    color: #F7FDFF;
+    text-decoration: none;
+}
+
+.bottom-section ul li a:hover {
+    cursor: pointer;
+}
+
+
+
+
+
+/* responsive*/
+@media (min-width: 1920px) {
+    .wave-search{
+        top: 26rem;
+    }
+    nav ul li a{
+        transition: 0.2s;
+    }
+}
+
+/* Untuk smartphone (layar ≤ 576px) */
+@media (max-width: 576px) {
+    .Home-container h1{
+        width: 100%;
+        padding-top: 50%;
+        font-size:3rem;
+        font-weight: bolder;
+        color: #005b96;
+        text-shadow: #0e0e0e23 5px 4px ;
+        font-family: Quicksand, sans-serif;
+        z-index: 4;
+        position: relative;
+        color: #F7FDFF;
+        text-align: center;
+    }
+    #Sejarah h2{
+        font-size:2rem;
+
+    }
+    .panduan-cards{
+        margin-left: 2rem;
+        border-radius: 15px;
+    }
+  }
+  
+  /* Untuk tablet (layar ≥ 768px dan ≤ 991px) */
+  @media (min-width: 768px) and (max-width: 991px) {
+    .Home-container h1{
+        width: 100%;
+        padding-top: 30%;
+        font-size:5rem;
+        font-weight: bolder;
+        color: #005b96;
+        text-shadow: #0e0e0e23 5px 4px ;
+        font-family: Quicksand, sans-serif;
+        z-index: 4;
+        position: relative;
+        color: #F7FDFF;
+        text-align: center;
+    }
+    
+
+    #Wisata-Pilihan img{
+        width: auto;
+        height: auto;
+    }
+    }
+
+  

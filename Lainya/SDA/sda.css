@@ -1,0 +1,432 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Quicksand:wght@300..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+html, body {
+    height: 100%; /* Pastikan html dan body mencakup 100% tinggi halaman */
+    display: flex;
+    flex-direction: column;
+}
+html{
+    scroll-behavior: smooth;
+}
+*{
+    font-family: Quicksand, sans-serif;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+::-webkit-scrollbar{
+    width: 0px;
+    height: 0px;
+}
+
+body{
+    background-color: #F7FDFF;
+    color: rgb(9, 25, 114);
+    font-family: Quicksand, sans-serif;
+}
+
+nav{
+    background-color: #1e1e1e61;
+    color: #FFFFFF;
+    position: fixed;
+    width: 10%;
+    padding: 5px 0 5px 0;
+    border-bottom-right-radius: 15px;
+    z-index: 999;
+}
+
+nav ul{
+    display: block;
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li{
+    display: inline;
+    transition: 0.3s ease;
+}
+
+nav ul li a {
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #FFFFFF;
+    transition: 0.3s ease;
+}
+
+nav ul li a:hover{
+    font-weight: bold;
+    transform: scale(1.1);
+}
+
+img{
+    width: 100%;
+    object-fit: cover;
+    height: 100vh;
+}
+
+h1{
+    font-size: 3.5em;
+    text-align: center;
+}
+
+
+.container-box{
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    transition: 0.3s;
+}
+.container-box h1{
+    height: 100%;
+    width: 100%;
+    padding-top: 15rem;
+    text-align: left;
+    padding-left: 1rem;
+    font-size: 7rem;
+    color: #fffff0;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.726), rgba(255, 255, 255, 0.062));
+}
+.container-box a{
+    text-decoration: none;
+    z-index: 3;
+    position: relative;
+    bottom: 20rem;
+    left: 3rem;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    border: 2px solid #fffff0;
+    border-radius: 15px;
+    color: #fffff0;
+}
+
+.deskripsi{
+    width: 100%;
+    height: auto;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    text-align: left;
+    background-color: #F7FDFF;
+}
+
+.deskripsi h2{
+    text-decoration: underline;
+    font-size:2.5rem;
+    margin: 4rem 0 2rem 0rem;
+    color: #142b4f;
+    font-family: Quicksand, sans-serif;
+}
+
+.deskripsi p{
+    font-size: 1.2rem;
+    margin: 0 5rem;
+    font-weight:500;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    margin: 3rem;
+}
+
+.image-container img {
+    width: 50rem;
+    height: auto;
+    aspect-ratio: 19/10;
+}
+
+.testimoni{
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    padding: 30px;
+}
+
+.komentar{
+    width: 70%;
+    height: auto;
+    overflow-y: scroll;
+}
+
+.komen-cards{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 70%;
+    height: auto;
+    padding: 10px 15px 10px 15px;
+    gap: 10px;
+    font-size: 1em;
+}
+
+.komen-cards p{font-size: 1em;}
+
+.avatar span{
+    width: 60px;
+    height: auto;
+}
+
+.rekomendasi {
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    scroll-snap-type:y mandatory;
+}
+
+.rekomendasi h2{
+   margin: 0 0 3rem 10rem;
+   font-size: 4rem;
+}
+
+
+.rekomnendasi-container {
+    display: flex;
+    justify-content: center;
+}
+
+.wisata-container {
+    display: flex;
+    gap: 1rem;
+}
+
+.wisata-cards {
+    position: relative;
+    width: 250px;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.wisata-cards:hover {
+    transform: scale(1.05); /* Slightly increase the size on hover */
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+}
+
+.wisata-cards img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.wisata-cards:hover img {
+    opacity: 0.3; /* Dim the image on hover */
+}
+
+.card-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: rgb(37, 37, 37);
+    font-family: Arial, sans-serif;
+    opacity: 0;
+    z-index: 10; /* Ensure the text appears above the image */
+    transition: opacity 0.3s ease-in-out;
+}
+
+.wisata-cards:hover .card-text {
+    opacity: 1; /* Show the text on hover */
+}
+
+.card-text h3 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.card-text p {
+    font-size: 1rem;
+}
+
+.lokasi-btn {
+    transition: 0.3s;
+}
+
+.lokasi-btn a:hover{
+    background-color: rgba(246, 233, 209, 0.241);
+    border: 2px solid #232323;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.lokasi-btn:hover #roket{
+    transform: translateY(-2rem);
+    transition: 0.3s ease;
+}
+
+footer {
+    /* margin-top: 30vh; Reduce the top margin to shrink the space above the footer */
+    width: 100%;
+    background-color: #232323;
+    color: #F7FDFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px; /* Reduced padding to make the footer more compact */
+    position: relative;
+    height: 10rem;
+}
+.left-section, .right-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 10px; /* Reduced horizontal padding */
+}
+
+.left-section ul, .right-section {
+    display: flex;
+    align-items: center;
+}
+
+.right-section img {
+    width: 10rem; /* Slightly reduce the logo size */
+    height: auto;
+    margin-left: auto;
+}
+
+.left-section ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.left-section ul li img {
+    width: 1.3rem; /* Reduce the icon size */
+    height: auto;
+}
+
+.bottom-section {
+    text-align: center;
+    margin-top: 0.5rem; /* Reduced top margin for the bottom section */
+}
+
+.bottom-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.bottom-section ul li {
+    display: inline;
+    margin: 0 8px; /* Reduced horizontal margin for links */
+}
+
+.bottom-section ul li a {
+    color: #F7FDFF;
+    text-decoration: none;
+}
+
+.bottom-section ul li a:hover {
+    cursor: pointer;
+}
+
+#komentar{
+    width: 100%;
+    height: 30px;
+    border: none;
+    background-color: #fffff0;
+}
+
+#komentar::placeholder{
+    padding-left: 1rem;
+}
+
+/*text style*/
+#bold{
+    font-weight: bolder;
+}
+#italic{
+    font-style: italic;
+}
+#underline{
+    text-decoration: underline;
+}
+#bold-italic{
+    font-weight: bolder;
+    font-style: italic;
+}
+#bold-underline{
+    font-weight: bold;
+    direction: underline;
+}
+
+/*location style*/
+.lokasi-container{
+    width: 100%;
+    height: 100%;   
+    background-color: #2323231e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.lokasi{
+    color: rgb(235, 243, 250);
+    background-color: #383737;
+    text-decoration: none;
+    font-size: 2em;
+    justify-content: center;
+    font-weight: bold;
+    padding: 10px;
+    border-radius:5px ;
+}
+
+.lokasi:hover{
+    background-color: #464444;
+    color: #ffffff;
+}
+
+/* responsip */
+@media (min-width: 768px) and (max-width: 991px) {
+    .deskripsi p{
+        font-size: 1rem;
+    }
+    .deskripsi {
+        padding: 0px;
+        margin: 0 auto; /* Center the entire description container */
+    }
+    
+    .deskripsi p{
+        font-size: 1.2rem;
+        font-weight:500;
+    }
+    
+    nav{
+        width: 100%;
+        padding: 0.5rem;
+    }
+    #content {
+        padding: 30px;
+        justify-content: center;
+        grid-template-columns: repeat(2fr); /* 2 images per row */
+    }
+    
+}
+
+/* Mobile view: 1 image per row */
+@media (max-width: 576px) {
+    .deskripsi p{
+        font-size: 1rem;
+    }
+    nav{
+        width: 100%;
+        padding: 0.5rem;
+    }
+
+    .container-box h1{
+        font-size: 3rem;
+    }
+}
